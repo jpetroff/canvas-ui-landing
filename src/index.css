@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	* {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004) !important;
+	}
+
+	body {
+		color: theme('colors.zinc-150');
+		font-size: 16px;
+		font-family: 'PP Mori';
+	}
+
+	@font-face {
+		font-family: 'PP Mori';
+		font-weight: 400;
+		font-style: normal;
+		src: url('assets/fonts/PPMori-Regular.eot');
+		/* IE9 Compat Modes */
+		src: url('assets/fonts/PPMori-Regular.eot?#iefix') format('embedded-opentype'),
+			/* IE6-IE8 */
+			url('assets/fonts/PPMori-Regular.woff2') format('woff2'),
+			/* Super Modern Browsers */
+			url('assets/fonts/PPMori-Regular.woff') format('woff'),
+			/* Pretty Modern Browsers */
+			url('assets/fonts/PPMori-Regular.ttf') format('truetype'),
+			/* Safari, Android, iOS */
+	}
+
+	@font-face {
+		font-family: 'PP Mori';
+		font-weight: 300;
+		font-style: normal;
+		src: url('assets/fonts/PPMori-Book.eot');
+		/* IE9 Compat Modes */
+		src: url('assets/fonts/PPMori-Book.eot?#iefix') format('embedded-opentype'),
+			/* IE6-IE8 */
+			url('assets/fonts/PPMori-Book.woff2') format('woff2'),
+			/* Super Modern Browsers */
+			url('assets/fonts/PPMori-Book.woff') format('woff'),
+			/* Pretty Modern Browsers */
+			url('assets/fonts/PPMori-Book.ttf') format('truetype'),
+			/* Safari, Android, iOS */
+	}
+
+	@font-face {
+		font-family: 'PP Mori';
+		font-weight: 500;
+		font-style: normal;
+		src: url('assets/fonts/PPMori-SemiBold.eot');
+		/* IE9 Compat Modes */
+		src: url('assets/fonts/PPMori-SemiBold.eot?#iefix') format('embedded-opentype'),
+			/* IE6-IE8 */
+			url('assets/fonts/PPMori-SemiBold.woff2') format('woff2'),
+			/* Super Modern Browsers */
+			url('assets/fonts/PPMori-SemiBold.woff') format('woff'),
+			/* Pretty Modern Browsers */
+			url('assets/fonts/PPMori-SemiBold.ttf') format('truetype'),
+			/* Safari, Android, iOS */
+	}
+
+	.typo-sm {
+		font-size: theme('fontSize.sm');
+		letter-spacing: 0.02px;
+		font-weight: 500;
+		line-height: 1.125rem;
+	}
+
+	.typo-base {
+		font-size: theme('fontSize.base');
+		letter-spacing: 0.03px;
+		font-weight: 500;
+		line-height: 1.375rem;
+	}
+
+	.typo-h-base {
+		font-size: theme('fontSize.h-base');
+		letter-spacing: 0.03px;
+		font-weight: 300;
+		line-height: 1.875rem;
+	}
+}
