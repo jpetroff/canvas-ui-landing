@@ -14,7 +14,7 @@ const Header: React.FunctionComponent<{}> = () => {
 
 			<img src={HeaderBgUrl} className='w-[1440px] h-[1024px] absolute top-0 left-[50%] translate-x-[-50%] -z-[1] pointer-events-none' />
 
-			<div className='flex flex-row flex-grow flex-shrink-0 justify-center items-center gap-2 py-1.5 rounded-full bg-zinc-800 ring-zinc-500 ring-1 typo-base box-border'>
+			<div className='flex flex-row flex-grow flex-shrink-0 justify-center items-center gap-2 py-1.5 rounded-full bg-zinc-800 ring-zinc-500 ring-1 typo-base box-border font-medium'>
 				<span>React-based</span>
 				<ReactLogo className='w-[24px] h-[22px] text-zinc-400' />
 				<span>open source design and development framework</span>
@@ -40,12 +40,12 @@ const Header: React.FunctionComponent<{}> = () => {
 			</div>
 
 			<div className='flex flex-row self-end  w-[384px] gap-4'>
-					<a href="#" className="flex flex-row items-center bg-zinc-800 ring-zinc-500 ring-1 box-border rounded-2xl pl-1 pr-5 h-8 gap-3">
-						<GithubLogo className='text-zinc-300' />
-						<span className="typo-base text-zinc-50">Demo repo</span>
+					<a href="#" className="flex flex-row items-center bg-zinc-800 ring-zinc-500 ring-1 box-border rounded-2xl pl-1.5 pr-5 h-8 gap-3 hover:ring-zinc-300 transition-all text-zinc-300 hover:text-zinc-250">
+						<GithubLogo />
+						<span className="typo-base text-zinc-50 font-medium">Demo repo</span>
 					</a>
 					<div className="flex flex-row flex-grow items-center justify-center px-4 bg-zinc-800 ring-zinc-500 ring-1 box-border rounded-2xl h-8">
-						<span className="typo-base text-zinc-300">More links coming soon!</span>
+						<span className="typo-base text-zinc-300 font-medium">More links coming soon!</span>
 					</div>
 				</div>
 
