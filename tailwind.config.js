@@ -1,12 +1,16 @@
 export default {
   content: ['index.html', './src/**/*.{js,jsx,ts,tsx,vue,html}'],
   theme: {
+    screens: {
+      'mobile': { max: '960px' }
+    },
     fontSize: {
       sm: '0.75rem',
       base: '0.875rem',
       default: '1rem',
       'h-base': '1.5rem',
-      'h-top': '2.75rem'
+      'h-top': '2.75rem',
+      'h-base-mobile': '1.25rem'
     },
     colors: {
       'amber-100': '#fef3c7',

@@ -10,7 +10,7 @@ import Video from './components/video';
 const App = () => {
 
   return (
-    <div className="flex flex-col w-[1152px] items-center">
+    <div className="flex flex-col w-[1152px] mobile:w-full mobile:px-6 items-center overflow-x-hidden">
       <Header />
       <FeatureImage />
       <FeaturesBlock />

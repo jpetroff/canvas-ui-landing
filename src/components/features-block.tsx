@@ -4,9 +4,9 @@ import ExtraLayersFeatureSvg from '@/assets/images/extra-layers-feature.svg?reac
 
 const FeaturesBlock = () => {
 	return (
-		<div className={`w-[960px] grid grid-cols-2 grid-rows-[repeat(4,_172px)] p-4 rounded-2xl ring-1 ring-zinc-700 mt-[114px] gap-4 `}>
+		<div className={`w-[960px] mobile:w-full grid grid-cols-2 mobile:grid-cols-1 grid-rows-[repeat(4,_172px)] p-4 mobile:p-0 rounded-2xl ring-1 mobile:ring-0 ring-zinc-700 mt-[114px] mobile:mt-8 gap-4 `}>
 			
-			<div className={`flex flex-col justify-between row-span-2 px-8 py-6 bg-zinc-750 overflow-hidden rounded-2xl border border-[#e8e8ed]/[0.08] backdrop-blur-sm shadow-[0px_2px_16px_-6px_theme(colors.zinc-950)] bg-[radial-gradient(49.02%_125.31%_at_11.73%_0%,_rgb(65,_65,_71)_10.000000149011612%,_rgb(55,_55,_61)_100%)]`}>
+			<div className={`flex flex-col justify-between row-span-2 px-8 py-6 mobile:px-4 mobile:py-4 bg-zinc-750 overflow-hidden rounded-2xl border border-[#e8e8ed]/[0.08] backdrop-blur-sm shadow-[0px_2px_16px_-6px_theme(colors.zinc-950)] bg-[radial-gradient(49.02%_125.31%_at_11.73%_0%,_rgb(65,_65,_71)_10.000000149011612%,_rgb(55,_55,_61)_100%)]`}>
 
 				<ResizeFeatureSvg className='flex-grow-0' />
 
@@ -16,7 +16,7 @@ const FeaturesBlock = () => {
 				</div>
 			</div>
 
-			<div className={`flex flex-col justify-between row-span-2 px-8 py-6 bg-zinc-750 overflow-hidden rounded-2xl border border-[#e8e8ed]/[0.08] backdrop-blur-sm shadow-[0px_2px_16px_-6px_theme(colors.zinc-950)] bg-[radial-gradient(49.02%_125.31%_at_11.73%_0%,_rgb(65,_65,_71)_10.000000149011612%,_rgb(55,_55,_61)_100%)]`}>
+			<div className={`flex flex-col justify-between row-span-2 px-8 py-6 mobile:px-4 mobile:py-4 bg-zinc-750 overflow-hidden rounded-2xl border border-[#e8e8ed]/[0.08] backdrop-blur-sm shadow-[0px_2px_16px_-6px_theme(colors.zinc-950)] bg-[radial-gradient(49.02%_125.31%_at_11.73%_0%,_rgb(65,_65,_71)_10.000000149011612%,_rgb(55,_55,_61)_100%)]`}>
 
 				<ExtraLayersFeatureSvg className='flex-grow-0' />
 
@@ -26,7 +26,7 @@ const FeaturesBlock = () => {
 				</div>
 			</div>
 
-			<div className={`flex flex-col justify-between row-span-2 px-8 py-6 bg-zinc-750 overflow-hidden rounded-2xl border border-[#e8e8ed]/[0.08] backdrop-blur-sm shadow-[0px_2px_16px_-6px_theme(colors.zinc-950)] bg-[radial-gradient(49.02%_125.31%_at_11.73%_0%,_rgb(65,_65,_71)_10.000000149011612%,_rgb(55,_55,_61)_100%)]`}>
+			<div className={`flex flex-col justify-between row-span-2 px-8 py-6 mobile:px-4 mobile:py-4 bg-zinc-750 overflow-hidden rounded-2xl border border-[#e8e8ed]/[0.08] backdrop-blur-sm shadow-[0px_2px_16px_-6px_theme(colors.zinc-950)] bg-[radial-gradient(49.02%_125.31%_at_11.73%_0%,_rgb(65,_65,_71)_10.000000149011612%,_rgb(55,_55,_61)_100%)]`}>
 
 				<div className='flex-grow-0'>&nbsp;</div>
 
@@ -36,7 +36,7 @@ const FeaturesBlock = () => {
 				</div>
 			</div>
 
-			<div className={`flex flex-col justify-between row-span-1 px-8 py-6 bg-zinc-750 overflow-hidden rounded-2xl border border-[#e8e8ed]/[0.08] backdrop-blur-sm shadow-[0px_2px_16px_-6px_theme(colors.zinc-950)] bg-[radial-gradient(49.02%_125.31%_at_11.73%_0%,_rgb(65,_65,_71)_10.000000149011612%,_rgb(55,_55,_61)_100%)]`}>
+			<div className={`flex flex-col justify-between row-span-1 px-8 py-6 mobile:px-4 mobile:py-4 bg-zinc-750 overflow-hidden rounded-2xl border border-[#e8e8ed]/[0.08] backdrop-blur-sm shadow-[0px_2px_16px_-6px_theme(colors.zinc-950)] bg-[radial-gradient(49.02%_125.31%_at_11.73%_0%,_rgb(65,_65,_71)_10.000000149011612%,_rgb(55,_55,_61)_100%)]`}>
 
 				<div className='flex-grow-0'>&nbsp;</div>
 
@@ -45,7 +45,7 @@ const FeaturesBlock = () => {
 				</div>
 			</div>
 
-			<div className={`flex flex-col justify-between row-span-1 px-8 py-6 bg-zinc-750 overflow-hidden rounded-2xl border border-[#e8e8ed]/[0.08] backdrop-blur-sm shadow-[0px_2px_16px_-6px_theme(colors.zinc-950)] bg-[radial-gradient(49.02%_125.31%_at_11.73%_0%,_rgb(65,_65,_71)_10.000000149011612%,_rgb(55,_55,_61)_100%)]`}>
+			<div className={`flex flex-col justify-between row-span-1 px-8 py-6 mobile:px-4 mobile:py-4 bg-zinc-750 overflow-hidden rounded-2xl border border-[#e8e8ed]/[0.08] backdrop-blur-sm shadow-[0px_2px_16px_-6px_theme(colors.zinc-950)] bg-[radial-gradient(49.02%_125.31%_at_11.73%_0%,_rgb(65,_65,_71)_10.000000149011612%,_rgb(55,_55,_61)_100%)]`}>
 
 				<div className='flex-grow-0'>&nbsp;</div>
 

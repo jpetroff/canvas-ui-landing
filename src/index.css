@@ -82,4 +82,34 @@
 		font-weight: 300;
 		line-height: 1.875rem;
 	}
+
+	@media screen(mobile) {
+		.typo-h-base {
+			font-size: theme('fontSize.h-base-mobile');
+			font-weight: 300;
+			line-height: 1.675rem;
+		}
+	}
+}
+
+@layer components {
+	@media screen and (max-width: 960px) {
+		.running-string {
+			animation: 6s linear 1s infinite alternate running-string;
+		}
+	}
+
+	@keyframes running-string {
+		0% {
+			transform: translateX(16px)
+		}
+
+		50% {
+			transform: translateX(calc(100vw - 48px - 100% - 16px))
+		}
+
+		100% {
+			transform: translateX(16px)
+		}
+	}
 }
