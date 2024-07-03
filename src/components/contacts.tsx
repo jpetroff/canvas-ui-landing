@@ -73,7 +73,7 @@ const Contacts = () => {
 			<Dialog
 				open={openDialog}
 				onClose={() => { window.location.hash = ''; setOpenDialog(false); } }
-				className='dialog'
+				className='dialog dialog-donation'
 			>
 				<iframe id='kofiframe' src='https://ko-fi.com/eugenepetrov/?hidefeed=true&widget=true&embed=true&preview=true' 
 					style={ {border: 'none', width: '100%', padding: '4px', background: '#f9f9f9'} } 

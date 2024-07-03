@@ -1,5 +1,10 @@
 import * as React from 'react'
 import Scroller from './scroller'
+import { Dialog } from '@ariakit/react'
+
+import LLMVideoUri from '@/assets/video/canvas-ui-llm.mp4'
+import ChatVideoUri from '@/assets/video/canvas-ui-chat.mp4'
+import AutoVideoUri from '@/assets/video/canvas-ui-automation.mp4'
 
 // backdrop-filter: blur(4px);
 // box-shadow: inset 0 0 12px 0 rgba(114,_114,_122,_0.12) ;
@@ -7,6 +12,12 @@ import Scroller from './scroller'
 
 const Video = () => {
 	const [tab, setTab] = React.useState(0)
+	const [openDialog, setOpenDialog] = React.useState(false)
+	const videoTag = React.useRef<HTMLVideoElement>(null)
+
+	const videoUri = 	tab == 0 ? LLMVideoUri :
+										tab == 1 ? ChatVideoUri : 
+										tab == 2 ? AutoVideoUri : LLMVideoUri
 
 	return (
 		<div className={`w-[960px] mobile:w-full mt-[188px] mobile:mt-12 items-center`}>
@@ -27,21 +38,35 @@ const Video = () => {
 					AI tools
 				</div>
 				<div 
-					data-selected={ tab == 1 ? '' : void 0 } 
+					data-selected={ tab == 1 ? '' : void 0 }
 					className={`flex flex-shrink-0 typo-base font-medium items-center justify-center border border-[rgba(232,_232,_237,_0.08)] h-9 w-44 rounded-full bg-zinc-750 bg-opacity-50 text-zinc-250 data-[selected]:text-zinc-50 data-[selected]:bg-opacity-100 cursor-pointer data-[selected]:cursor-default hover:text-zinc-50`}
 					onClick={() => setTab(1)}
 				>
-					Automation scenarios
+					Conversational flows
 				</div>
 				<div 
-					data-selected={ tab == 2 ? '' : void 0 }
+					data-selected={ tab == 2 ? '' : void 0 } 
 					className={`flex flex-shrink-0 typo-base font-medium items-center justify-center border border-[rgba(232,_232,_237,_0.08)] h-9 w-44 rounded-full bg-zinc-750 bg-opacity-50 text-zinc-250 data-[selected]:text-zinc-50 data-[selected]:bg-opacity-100 cursor-pointer data-[selected]:cursor-default hover:text-zinc-50`}
 					onClick={() => setTab(2)}
 				>
-					Conversational flows
+					Automation scenarios
 				</div>
 			</div>
 			</Scroller>
+
+			<div className={`w-[960px] aspect-video`} onClick={() => setOpenDialog(true) } >
+				open
+			</div>
+
+			<Dialog
+				open={openDialog}
+				onClose={() => { setOpenDialog(false); videoTag.current && videoTag.current.pause() } }
+				className='dialog bg-transparent w-auto p-0 aspect-video outline-none'
+			>
+				{tab == 0 && <video ref={videoTag} className='w-full aspect-video outline-none' controls autoPlay><source src={LLMVideoUri} type="video/mp4" /></video>}
+				{tab == 1 && <video ref={videoTag} className='w-full aspect-video outline-none' controls autoPlay><source src={ChatVideoUri} type="video/mp4" /></video>}
+				{tab == 2 && <video ref={videoTag} className='w-full aspect-video outline-none' controls autoPlay><source src={AutoVideoUri} type="video/mp4" /></video>}
+			</Dialog>
 		</div>
 	)
 }
