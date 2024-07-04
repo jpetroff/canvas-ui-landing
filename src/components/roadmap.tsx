@@ -80,7 +80,7 @@ const Roadmap = () => {
 
 		<div className={`w-[960px] mobile:w-full mobile:relative grid grid-flow-row gap-0 grid-cols-8 mobile:grid-cols-1 mt-20 mobile:mt-12`}>
 
-			<div className={`relative col-span-2 self-end col-start-1 mobile:col-start-1 mobile:row-auto mobile:pl-20 mobile:mb-16`}>
+			<div className={`relative col-span-2 self-end col-start-1 mobile:col-start-1 mobile:row-start-1 mobile:pl-20 mobile:mb-16`}>
 				<div className={`flex flex-row gap-2 items-center typo-sm tracking-wide text-zinc-250 `}>
 					<Badge className='bg-emerald-800'>DONE</Badge>
 				</div>
@@ -90,7 +90,7 @@ const Roadmap = () => {
 				<RoadmapChip type='both' className='-bottom-[45px]' />
 			</div>
 
-			<div className={`relative col-span-2 self-end col-start-5 mobile:col-start-1 mobile:row-auto mobile:pl-20 mobile:mb-16`}>
+			<div className={`relative col-span-2 self-end col-start-5 mobile:col-start-1 mobile:row-start-3 mobile:pl-20 mobile:mb-16`}>
 				<div className={`flex flex-row gap-2 items-center typo-sm tracking-wide text-zinc-250 `}>
 					<Badge className='bg-cyan-800 '>TODO</Badge>
 					<Badge className='bg-cyan-800  bg-[linear-gradient(144deg,_#4338ca_0%,_#d97706_100%)]'>ßETA</Badge>
@@ -102,7 +102,7 @@ const Roadmap = () => {
 				<RoadmapChip type='dev' className='-bottom-[45px]' />
 			</div>
 
-			<div className={`relative col-span-2 self-start col-start-3 row-start-3 mobile:col-start-1 mobile:row-auto mobile:pl-20 mobile:mb-16`}>
+			<div className={`relative col-span-2 self-start col-start-3 row-start-3 mobile:col-start-1 mobile:row-start-2 mobile:pl-20 mobile:mb-16`}>
 				<div className={`flex flex-row gap-2 items-center typo-sm tracking-wide text-zinc-250 `}>
 					<Badge className='bg-cyan-800 '>TODO</Badge>
 					design
@@ -113,7 +113,7 @@ const Roadmap = () => {
 				<RoadmapChip type='design' className='-top-[49px]' />
 			</div>
 
-			<div className={`relative col-span-2 self-start col-start-7 row-start-3 mobile:col-start-1 mobile:row-auto mobile:pl-20 mobile:mb-16`}>
+			<div className={`relative col-span-2 self-start col-start-7 row-start-3 mobile:col-start-1 mobile:row-start-4 mobile:pl-20 mobile:mb-16`}>
 				<div className={`flex flex-row gap-2 items-center typo-sm tracking-wide text-zinc-250 `}>
 					<Badge className='bg-cyan-800 '>TODO</Badge>
 					design

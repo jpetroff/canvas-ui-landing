@@ -12,7 +12,7 @@ const LinkPromo : React.FC<TLinkPromo> = (props) => {
 	const {children, href, title, className, ...intrinsicProps} = props 
 	return (
 		<a 
-			className={`${className || ''} flex flex-col gap-2 border-b border-zinc-600 py-4 text-zinc-250 hover:text-zinc-50 hover:border-zinc-400 bg-[radial-gradient(276.58%_100%_at_50.39%_0%,_rgb(36,_36,_41)_0%,_rgba(75,_75,_82,_0.16)_100%)]`} 
+			className={`${className || ''} flex flex-col gap-2 border-none border-zinc-600 py-4 text-zinc-250 hover:text-zinc-50 hover:border-zinc-400 bg-[radial-gradient(118.45%_61.98%_at_50.39%_39.51%,_rgba(75,_75,_82,_0.24)_0%,_rgba(36,_36,_41,_0)_100%)]`} 
 			href={href} title={`${title || ''}`} 
 			style={ {backdropFilter: 'blur(10px)'} }
 			target={ href[0] == '#' ? '' : '_blank'}
