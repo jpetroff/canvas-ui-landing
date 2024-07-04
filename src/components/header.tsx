@@ -45,7 +45,7 @@ const Header: React.FunctionComponent<{}> = () => {
 			</div>
 
 			<div className='flex flex-row mobile:flex-col self-end w-[384px] mobile:w-full gap-4'>
-					<a href="#" className="flex flex-row items-center bg-zinc-800 ring-zinc-500 ring-1 box-border rounded-2xl pl-1.5 pr-5 h-8 gap-3 hover:ring-zinc-300 transition-all text-zinc-300 hover:text-zinc-250">
+					<a href="https://github.com/jpetroff/canvas-ui-demo" className="flex flex-row items-center bg-zinc-800 ring-zinc-500 ring-1 box-border rounded-2xl pl-1.5 pr-5 h-8 gap-3 hover:ring-zinc-300 transition-all text-zinc-300 hover:text-zinc-250">
 						<GithubLogo />
 						<span className="typo-base text-zinc-50 font-medium mobile:flex-grow mobile:text-center mobile:-ml-4">Demo repo</span>
 					</a>
