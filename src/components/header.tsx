@@ -8,6 +8,9 @@ import ResizeWestBlue from '../assets/images/resizeeastwest-blue.svg?react'
 
 const Header: React.FunctionComponent<{}> = () => {
 
+	const gradBorder = `after:content-[' '] after:absolute after:-m-[1px] after:z-[-1] after:top-0 after:bottom-0 after:right-0 after:left-0 after:rounded-[inherit] bg-clip-padding border border-[transparent]`
+	const mobileRing = `mobile:border-zinc-600`
+
 	return <div className='flex flex-grow'>
 
 		<div className='flex flex-col flex-grow-0 flex-shrink-0 px-[96px] box-content pt-[256px] w-[960px] mobile:w-full mobile:px-0 mobile:pt-6 gap-[31px] mobile:gap-5'>
@@ -17,7 +20,9 @@ const Header: React.FunctionComponent<{}> = () => {
 				style={ {backgroundImage: `url('${HeaderBgUrl}')`} }
 			></div>
 
-			<div className='flex flex-row mobile:overflow-hidden flex-grow flex-shrink-0 justify-center items-center mobile:justify-start py-1.5 rounded-full bg-zinc-800 ring-zinc-500 ring-1 typo-base box-border font-medium'>
+			<div className={`flex flex-row mobile:overflow-hidden flex-grow flex-shrink-0 justify-center items-center mobile:justify-start h-[33px] rounded-full bg-zinc-800 
+				relative ${gradBorder} after:bg-[linear-gradient(135deg,_#373047_0%,_#414147_80.55%,_#673344_100%)]
+				typo-base box-border font-medium -mr-1 mobile:after:content-none ${mobileRing}`}>
 				<div className={`flex flex-row flex-shrink-0 running-string gap-2`}>
 					<span >React-based</span>
 					<ReactLogo className='w-[24px] h-[22px] text-zinc-400' />
@@ -27,7 +32,10 @@ const Header: React.FunctionComponent<{}> = () => {
 
 			<div className={`flex flex-row mobile:flex-col flex-grow gap-[30px]`}>
 
-				<div className='flex flex-col justify-center items-center flex-grow h-[192px] mobile:h-auto mobile:py-7 bg-zinc-800 ring-zinc-500 ring-1 box-border rounded-2xl relative'>
+				<div className={`flex flex-col 
+					justify-center items-center flex-grow h-[192px] mobile:h-auto mobile:py-7 bg-zinc-800 box-content rounded-2xl 
+					${gradBorder} after:bg-[linear-gradient(22deg,_#373047_0%,_theme(colors.zinc-600)_100%)]
+					relative mobile:after:content-none ${mobileRing}`}>
 					<CanvasLogo className='mobile:w-[80%]' />
 					<div data-top-handle className='absolute bg-zinc-500 opacity-50 rounded-full -top-2 left-1/2 -translate-x-1/2 w-10 h-1'></div>
 					<div data-bottom-handle className='absolute bg-zinc-500 opacity-50 rounded-full -bottom-2 left-1/2 -translate-x-1/2 w-10 h-1'></div>
@@ -37,7 +45,10 @@ const Header: React.FunctionComponent<{}> = () => {
 					<ResizeWestBlue className='absolute -left-[22px] top-1/2 -translate-y-1/2' />
 				</div>
 
-				<div className='flex flex-col justify-center items-center w-[384px] mobile:w-full h-[192px] mobile:h-auto mobile:py-8 bg-zinc-800 ring-zinc-500 ring-1 box-border rounded-2xl'>
+				<div className={`flex flex-col justify-center 
+					items-center w-[385px] mobile:w-full h-[192px] mobile:h-auto mobile:py-8 bg-zinc-800 box-content 
+					${gradBorder} after:bg-[linear-gradient(22deg,_#673344_0.81%,_#4b4b52_100%);] m-[-1px]
+					rounded-2xl relative mobile:after:content-none ${mobileRing}`}>
 					<span className='typo-h-base px-1 text-center text-zinc-100'>
 						Transform large clunky linear forms into&nbsp;adjustable and self-explanatory experience
 					</span>
@@ -45,11 +56,11 @@ const Header: React.FunctionComponent<{}> = () => {
 			</div>
 
 			<div className='flex flex-row mobile:flex-col self-end w-[384px] mobile:w-full gap-4'>
-					<a href="https://github.com/jpetroff/canvas-ui-demo" className="flex flex-row items-center bg-zinc-800 ring-zinc-500 ring-1 box-border rounded-2xl pl-1.5 pr-5 h-8 gap-3 hover:ring-zinc-300 transition-all text-zinc-300 hover:text-zinc-250">
+					<a href="https://github.com/jpetroff/canvas-ui-demo" className="flex flex-row items-center bg-zinc-800 ring-zinc-600 ring-opacity-70 ring-1 box-border rounded-2xl pl-1.5 pr-5 h-8 gap-3 hover:ring-zinc-300 transition-all text-zinc-300 hover:text-zinc-250">
 						<GithubLogo />
 						<span className="typo-base text-zinc-50 font-medium mobile:flex-grow mobile:text-center mobile:-ml-4">Demo repo</span>
 					</a>
-					<div className="flex flex-row flex-grow items-center justify-center px-4 bg-zinc-800 ring-zinc-500 ring-1 box-border rounded-2xl h-8">
+					<div className="flex flex-row flex-grow items-center justify-center px-4 bg-zinc-800 ring-zinc-600 ring-opacity-90 ring-1 box-border rounded-2xl h-8">
 						<span className="typo-base text-zinc-300 font-medium">More links coming soon!</span>
 					</div>
 				</div>

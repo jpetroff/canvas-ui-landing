@@ -8,10 +8,31 @@ import AutoVideoUri from '@/assets/video/canvas-ui-automation.mp4'
 import LLMVideoThumb from '@/assets/images/canvas-ui-llm-thumb.jpg'
 import ChatVideoThumb from '@/assets/images/canvas-ui-chat-thumb.jpg'
 import AutoVideoThumb from '@/assets/images/canvas-ui-automation-thumb.jpg'
+import PlayCircleSvg from '@/assets/images/play_circle.svg?react'
 
-// backdrop-filter: blur(4px);
-// box-shadow: inset 0 0 12px 0 rgba(114,_114,_122,_0.12) ;
-// background: var(--colors-zinc-750), radial-gradient(49.02% 125.31% at 11.73% 0%, rgb(65, 65, 71) 10.000000149011612%, rgb(55, 55, 61) 100%);
+type TVideoThumbnail = {
+	className?: string,
+	image: string,
+	children?: React.ReactNode,
+	onClick: React.MouseEventHandler<HTMLDivElement>
+}
+
+const VideoThumbnail : React.FunctionComponent<TVideoThumbnail> = (
+	{className, image, children, onClick}
+) => {
+	return (
+		<div 
+			className={`${className || ''} relative w-full flex flex-row justify-center items-center aspect-video bg-zinc-900 rounded-lg cursor-pointer text-indigo-50/60 hover:text-indigo-50/[0.96]`} 
+			onClick={onClick} 
+		>
+			<div className={`w-full aspect-video rounded-lg overflow-hidden hover:scale-[1.01] absolute top-0 left-0 bg-zinc-900 transition-transform z-0`}>
+				<img src={image} className='w-full aspect-video opacity-45' />
+			</div>
+			<PlayCircleSvg className={`w-24 h-24 z-10 relative pointer-events-none transition-colors`} />
+			{children}
+		</div>
+	)
+}
 
 const Video = () => {
 	const [tab, setTab] = React.useState(0)
@@ -23,7 +44,7 @@ const Video = () => {
 			<style>{`[data-selected]{box-shadow: inset 0 0 12px 0 rgba(114,114,122,0.12);background-image: radial-gradient(49% 125% at 12% 0%, rgb(65, 65, 71) 10%, rgb(55, 55, 61) 100%);}`}</style>
 			<h3 className={`flex flex-row gap-4 items-center w-full`}>
 				<i className='flex-grow h-px block bg-[linear-gradient(90deg,_theme(colors.zinc-800)_0%,_theme(colors.zinc-500)_100%)]' />
-				<span className={`typo-h-base text-zinc-100`}>Practical examples</span>
+				<span className={`typo-h-base text-zinc-100`}>Example demos</span>
 				<b className='flex-grow h-px block bg-[linear-gradient(90deg,_theme(colors.zinc-500)_0%,_theme(colors.zinc-800)_100%)]' />
 			</h3>
 
@@ -53,29 +74,13 @@ const Video = () => {
 			</div>
 			</Scroller>
 
-			{tab == 0 && <div 
-				className={`w-full max-w-3xl aspect-video bg-cover border-1 rounded-lg shadow-2xl bg-[#13121B] cursor-pointer hover:scale-[1.01] transition-transform`} 
-				onClick={() => setOpenDialog(true) } 
-				style={ 
-					{backgroundImage: `url('${LLMVideoThumb}')`}
-				}
-			></div>}
+			<div className={`w-full max-w-3xl aspect-video rounded-lg shadow-2xl shadow-zinc-950/80 bg-[#13121B] cursor-pointer transition-colors`}>
+				<VideoThumbnail image={LLMVideoThumb} onClick={() => setOpenDialog(true)} className={`${tab == 0 ? '' : 'hidden'}`} />
 
-			{tab == 1 && <div 
-				className={`w-full max-w-3xl aspect-video bg-cover border-1 rounded-lg shadow-2xl bg-[#13121B] cursor-pointer hover:scale-[1.01] transition-transform`} 
-				onClick={() => setOpenDialog(true) } 
-				style={ 
-					{backgroundImage: `url('${ChatVideoThumb}')`}
-				}
-			></div>}
+				<VideoThumbnail image={ChatVideoThumb} onClick={() => setOpenDialog(true)} className={`${tab == 1 ? '' : 'hidden'}`} />
 
-			{tab == 2 && <div 
-				className={`w-full max-w-3xl aspect-video bg-cover border-1 rounded-lg shadow-2xl bg-[#13121B] cursor-pointer hover:scale-[1.01] transition-transform`} 
-				onClick={() => setOpenDialog(true) } 
-				style={ 
-					{backgroundImage: `url('${AutoVideoThumb}')`}
-				}
-			></div>}
+				<VideoThumbnail image={AutoVideoThumb} onClick={() => setOpenDialog(true)} className={`${tab == 2 ? '' : 'hidden'}`} />
+			</div>
 
 			<Dialog
 				open={openDialog}
