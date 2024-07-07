@@ -40,7 +40,7 @@ const Video = () => {
 	const videoTag = React.useRef<HTMLVideoElement>(null)
 
 	return (
-		<div className={`w-[960px] mobile:w-full mt-[188px] mobile:mt-12 items-center flex flex-col gap-10`}>
+		<div className={`w-[960px] mobile:w-full mt-[188px] mobile:mt-20 items-center flex flex-col gap-10`}>
 			<style>{`[data-selected]{box-shadow: inset 0 0 12px 0 rgba(114,114,122,0.12);background-image: radial-gradient(49% 125% at 12% 0%, rgb(65, 65, 71) 10%, rgb(55, 55, 61) 100%);}`}</style>
 			<h3 className={`flex flex-row gap-4 items-center w-full`}>
 				<i className='flex-grow h-px block bg-[linear-gradient(90deg,_theme(colors.zinc-800)_0%,_theme(colors.zinc-500)_100%)]' />

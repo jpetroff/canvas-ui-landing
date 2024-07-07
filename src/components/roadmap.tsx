@@ -24,7 +24,7 @@ const RoadmapChip : React.FC<TRoadmapChip> = ({type, className}) => {
 		case 'design': 
 		default: 
 			return (
-				<div className={`absolute -left-[13px] bg-zinc-800 ring-4 ring-zinc-800 ${className || ''} mobile:-top-1.5 mobile:left-4 mobile:bottom-auto`}>
+				<div className={`absolute -left-[13px] bg-zinc-800 ring-4 ring-zinc-800 ${className || ''} mobile:-top-1.5 mobile:left-3 mobile:bottom-auto`}>
 					<DesignOutlineSvg />
 				</div>
 			);
@@ -49,7 +49,7 @@ const RoadmapChip : React.FC<TRoadmapChip> = ({type, className}) => {
 const Roadmap = () => {
 	return (<>
 
-		<div className={`flex flex-col items-center mt-[192px] mobile:mt-16`}>
+		<div className={`flex flex-col items-center mt-[192px] mobile:mt-20`}>
 			<span className={`flex gap-2 flex-row mobile:flex-wrap mobile:items-center mobile:gap-0 items-baseline text-h-base mobile:text-h-base-mobile mobile:leading-8 leading-[2.625rem] text-zinc-250 font-light`}>
 				<CanvasLogoSvg className='text-zinc-50 -mt-px mobile:py-2 mobile:box-content mobile:h-4 mobile:w-[117px] h-[19px] w-[140px]' />&nbsp;aims to provide both
 			</span>
@@ -67,7 +67,7 @@ const Roadmap = () => {
 			</span>
 		</div>
 		
-		<h3 className={`flex flex-row flex-grow gap-4 items-center w-[960px] mobile:w-full mt-[194px] mobile:mt-16`}>
+		<h3 className={`flex flex-row flex-grow gap-4 items-center w-[960px] mobile:w-full mt-[194px] mobile:mt-20`}>
 			<i className='flex-grow h-px block bg-[linear-gradient(90deg,_theme(colors.zinc-800)_0%,_theme(colors.zinc-500)_100%)]' />
 			<span className={`typo-h-base text-zinc-50`}>
 				Roadmap

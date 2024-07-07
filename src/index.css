@@ -12,7 +12,7 @@
 	body {
 		color: theme('colors.zinc-150');
 		font-size: 16px;
-		font-family: 'PP Mori';
+		font-family: 'PP Mori', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	}
 
 	@font-face {
@@ -65,7 +65,7 @@
 
 	.typo-sm {
 		font-size: theme('fontSize.sm');
-		letter-spacing: 0.025em;
+		letter-spacing: 0.01em;
 		font-weight: 500;
 		line-height: 1.125rem;
 	}
