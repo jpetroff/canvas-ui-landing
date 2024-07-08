@@ -2,7 +2,6 @@
 FROM node:alpine
 
 ARG appDir=/app
-ARG gitBranch=release
 
 EXPOSE 8880
 
@@ -10,11 +9,12 @@ RUN mkdir $appDir
 
 WORKDIR $appDir
 
+ADD docker-start.sh /
+
+RUN chmod +x /docker-start.sh
+
 RUN apk add --no-cache git
 
-RUN npm install pm2 -g
+RUN npm install pm2 express -g
 
-RUN git clone https://github.com/jpetroff/canvas-ui-landing ${appDir} && \
-		git checkout ${gitBranch}
-
-CMD "git checkout . && pm2 serve ./dist 8880 --no-daemon"
+CMD /docker-start.sh
