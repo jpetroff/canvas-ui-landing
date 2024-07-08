@@ -15,6 +15,6 @@ RUN chmod +x /docker-start.sh
 
 RUN apk add --no-cache git
 
-RUN npm install pm2 express -g
+RUN npm install pm2 -g
 
 CMD /docker-start.sh

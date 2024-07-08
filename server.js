@@ -66,6 +66,6 @@ app.use('*', async (req, res) => {
 })
 
 // Start http server
-app.listen(`0.0.0.0:${port}`, () => {
-	console.log(`Server started at http://0.0.0.0:${port}`)
+app.listen(port, () => {
+	console.log(`Server started at http://localhost:${port}`)
 })
