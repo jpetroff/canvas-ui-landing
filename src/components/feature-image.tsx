@@ -24,9 +24,9 @@ const FeatureImage: React.FunctionComponent<{}> = () => {
 					className='flex-shrink-0 mobile:w-[163px] w-[215px]'
 				/>
 
-				<div className={`flex flex-col flex-grow mt-11 gap-5`}>
+				<div className={`flex flex-col flex-grow mt-11 gap-5 mobile:min-w-48`}>
 					<p className={`m-0 p-0 typo-base text-zinc-100 font-medium`}>
-						Split your lengthy&nbsp;form into&nbsp;manageable chunks
+						Split lengthy&nbsp;form into&nbsp;manageable blocks
 					</p>
 					<p className={`m-0 p-0 typo-base text-zinc-100 items-center font-medium`}>
 						Put it inside&nbsp;<CanvasBadgeSvg className='inline-block -mt-[2px]' />

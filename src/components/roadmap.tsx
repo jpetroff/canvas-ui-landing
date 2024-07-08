@@ -63,7 +63,7 @@ const Roadmap = () => {
 				</div>
 			</span>
 			<span className={`flex gap-2 flex-row items-center text-h-base mobile:text-h-base-mobile mobile:leading-8 leading-[2.625rem] text-zinc-250 font-light mobile:text-center`}>
-				to seamlessly integrate into&nbsp;your design&nbsp;system and&nbsp;process
+				to better&nbsp;fit your design&nbsp;and development&nbsp;processes
 			</span>
 		</div>
 		
@@ -92,34 +92,34 @@ const Roadmap = () => {
 
 			<div className={`relative col-span-2 self-end col-start-5 mobile:col-start-1 mobile:row-start-3 mobile:pl-20 mobile:mb-16`}>
 				<div className={`flex flex-row gap-2 items-center typo-sm tracking-wide text-zinc-250 `}>
-					<Badge className='bg-cyan-800 '>TODO</Badge>
-					<Badge className='bg-cyan-800  bg-[linear-gradient(144deg,_#4338ca_0%,_#d97706_100%)]'>ßETA</Badge>
+					<Badge className='bg-sky-700 '>TODO</Badge>
+					<Badge className='bg-[linear-gradient(144deg,_#4338ca_0%,_#d97706_100%)]'>ßETA</Badge>
 					development
 				</div>
 				<p className={`typo-base text-zinc-50 mt-2`}>
-				Testing coverage, code&nbsp;refactoring to&nbsp;meet React standards
+				Testing coverage, code&nbsp;refactoring for production
 				</p>
 				<RoadmapChip type='dev' className='-bottom-[45px]' />
 			</div>
 
 			<div className={`relative col-span-2 self-start col-start-3 row-start-3 mobile:col-start-1 mobile:row-start-2 mobile:pl-20 mobile:mb-16`}>
 				<div className={`flex flex-row gap-2 items-center typo-sm tracking-wide text-zinc-250 `}>
-					<Badge className='bg-cyan-800 '>TODO</Badge>
+					<Badge className='bg-sky-700'>TODO</Badge>
 					design
 				</div>
 				<p className={`typo-base text-zinc-50 mt-2`}>
-					Collect more practical examples and requests that would shape requirements
+					Collecting design use cases, prototype tests
 				</p>
 				<RoadmapChip type='design' className='-top-[49px]' />
 			</div>
 
 			<div className={`relative col-span-2 self-start col-start-7 row-start-3 mobile:col-start-1 mobile:row-start-4 mobile:pl-20 mobile:mb-16`}>
 				<div className={`flex flex-row gap-2 items-center typo-sm tracking-wide text-zinc-250 `}>
-					<Badge className='bg-cyan-800 '>TODO</Badge>
+					<Badge className='bg-sky-700'>TODO</Badge>
 					design
 				</div>
 				<p className={`typo-base text-zinc-50 mt-2`}>
-					User testing and design refinement
+					Early adopters testing and design refinement
 				</p>
 				<RoadmapChip type='design' className='-top-[49px]' />
 			</div>
