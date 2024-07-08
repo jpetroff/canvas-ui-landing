@@ -17,7 +17,7 @@ import ConnectionsFeatureUri2x from '@/assets/images/connections-feature@2x.png'
 
 const FeaturesBlock = () => {
 	return (
-		<div className={`w-[960px] mobile:w-full grid grid-cols-2 mobile:grid-cols-1 grid-rows-[repeat(4,_172px)] mobile:grid-rows-none p-4 mobile:p-0 rounded-3xl ring-1 mobile:ring-0 ring-zinc-700 mt-[114px] mobile:mt-20 gap-4`}>
+		<div className={`w-[960px] mobile:w-full grid grid-cols-2 mobile:grid-cols-1 grid-rows-[repeat(4,_172px)] mobile:grid-rows-none p-4 mobile:p-0 rounded-3xl ring-1 mobile:ring-0 ring-zinc-700 ring-opacity-30 mt-[114px] mobile:mt-20 gap-4`}>
 			
 			<div className={`flex flex-col justify-between row-span-2 mobile:row-span-1 px-8 py-6 mobile:px-4 mobile:py-4 bg-zinc-750 overflow-hidden rounded-2xl border border-[#e8e8ed]/[0.08] backdrop-blur-sm shadow-[0px_2px_16px_-6px_theme(colors.zinc-950)] bg-[radial-gradient(49.02%_125.31%_at_11.73%_0%,_rgb(65,_65,_71)_10.000000149011612%,_rgb(55,_55,_61)_100%)] mobile:gap-6`}>
 
@@ -27,7 +27,7 @@ const FeaturesBlock = () => {
 
 				<div className={`flex flex-col gap-3`}>
 					<span className={`typo-h-base text-zinc-100`}>Let users move, resize, rearrange</span>
-					<span className={`typo-sm text-zinc-250`}>All necessary items’ positions can be defined by users keeping necessary ones always at hand</span>
+					<span className={`typo-sm text-zinc-250`}>Form sections can&nbsp;be moved&nbsp;around to&nbsp;keep necessary fields&nbsp;at&nbsp;hand</span>
 				</div>
 			</div>
 
@@ -40,7 +40,7 @@ const FeaturesBlock = () => {
 
 				<div className={`flex flex-col gap-3`}>
 					<span className={`typo-h-base text-zinc-100`}>Add extra layers for collaboration</span>
-					<span className={`typo-sm text-zinc-250`}>Notes, comments and what not. Remember that onboarding is&nbsp;also&nbsp;collaboration between your team and users </span>
+					<span className={`typo-sm text-zinc-250`}>Notes, comments and what not. Onboarding is&nbsp;also&nbsp;collaboration between your&nbsp;team and&nbsp;your&nbsp;users </span>
 				</div>
 			</div>
 

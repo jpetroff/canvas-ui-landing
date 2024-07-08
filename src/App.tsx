@@ -5,12 +5,13 @@ import FeaturesBlock from './components/features-block';
 import Footer from './components/footer';
 import Header from './components/header'
 import Roadmap from './components/roadmap';
+import Toast from './components/toast';
 import Video from './components/video';
 
 const App = () => {
 
   return (
-    <div className="flex flex-col w-[1152px] mobile:w-full mobile:px-6 items-center overflow-x-hidden">
+    <div suppressHydrationWarning className="flex flex-col w-[1152px] mobile:w-full mobile:px-6 items-center overflow-x-hidden">
       <Header />
       <FeatureImage />
       <FeaturesBlock />
@@ -18,6 +19,7 @@ const App = () => {
       <Roadmap />
       <Contacts />
       <Footer />
+      {!import.meta.env.SSR && <Toast />}
     </div>
   );
 };
