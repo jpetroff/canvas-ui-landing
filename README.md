@@ -1,6 +1,6 @@
 ## Intro
 
-(https://canvas.designpr.one)[Canvas UI] landing page repository
+[Canvas UI](https://canvas.designpr.one) landing page repository
 
 ## Run
 
